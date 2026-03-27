@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MAX 5
-
-int queue[MAX];
+int queue[MAX]
+;
 int front = -1, rear = -1;
-
 void enqueue(int doc) {
     if (rear == MAX - 1) {
         printf("Queue Full\n");
@@ -15,7 +13,6 @@ void enqueue(int doc) {
     queue[++rear] = doc;
     printf("Document %d added\n", doc);
 }
-
 void dequeue() {
     if (front == -1 || front > rear) {
         printf("No documents to print\n");
@@ -23,7 +20,6 @@ void dequeue() {
     }
     printf("Printing document %d\n", queue[front++]);
 }
-
 void display() {
     if (front == -1 || front > rear) {
         printf("No pending documents\n");
@@ -36,10 +32,8 @@ void display() {
     }
     printf("\n");
 }
-
 int main() {
     int choice, doc;
-
     while (1) {
         printf("\n1.Add\n2.Print\n3.Display\n4.Exit\n");
         scanf("%d", &choice);
