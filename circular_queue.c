@@ -1,11 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 #define MAX 5
-
 int queue[MAX];
-int front = -1, rear = -1;
 
+int front = -1, rear = -1;
 void enqueue(int val) {
     if ((rear + 1) % MAX == front) {
         printf("Queue Full\n");
@@ -49,7 +47,6 @@ void display() {
 }
 int main() {
     int choice, val;
-
     while (1) {
         printf("\n1.Enqueue\n2.Dequeue\n3.Peek\n4.Display\n5.Exit\n");
         scanf("%d", &choice);
